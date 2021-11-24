@@ -23,7 +23,7 @@
 
 <script>
 export default {
-  name: "Navigation",
+  name: "Header",
   props: {
     msg: String,
   },
