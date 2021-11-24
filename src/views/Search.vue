@@ -7,6 +7,7 @@
         use-range
         :shortcuts="false"
         v-model="dateValue"
+        @click="g"
         :formatter="formatter"
       ></litepie-datepicker>
 
@@ -50,6 +51,7 @@ export default {
       date: "DD MMM YYYY",
       month: "MMM",
     });
+    // let g = () => console.log(dateValue);
 
     return {
       dateValue,

@@ -46,7 +46,7 @@
       <li
         v-for="city in searchCities"
         :key="city.name"
-        @click="selectCountry(city.name)"
+        @click="selectCity(city.name)"
         v-on:click="isShow = false"
         class="cursor-pointer hover:bg-gray-100 p-1"
       >
@@ -88,16 +88,15 @@ export default {
       });
     });
 
-    const selectCountry = (country) => {
-      searchTerm.value = country;
-      console.log(country);
+    const selectCity = (city) => {
+      searchTerm.value = city;
     };
 
     return {
       cities,
       searchTerm,
       searchCities,
-      selectCountry,
+      selectCity,
     };
   },
 };
