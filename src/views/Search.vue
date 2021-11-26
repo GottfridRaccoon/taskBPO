@@ -1,18 +1,19 @@
 <template>
   <div class="items-center w-full flex-grow">
     <div class="search w-3/5 m-auto">
-      <SearchInput title="From"></SearchInput>
-      <SearchInput title="To"></SearchInput>
+      <SearchInputFrom title="From"></SearchInputFrom>
+      <SearchInputTo title="To"></SearchInputTo>
+
       <litepie-datepicker
         use-range
         :shortcuts="false"
-        v-model="dateValue"
-        @click="g"
+        v-model="$store.state.dateValue"
         :formatter="formatter"
       ></litepie-datepicker>
 
       <router-link to="/result">
         <button
+          v-on:click="getTickets"
           class="
             bg-blue-500
             hover:bg-blue-700
@@ -37,16 +38,33 @@
 import { ref } from "vue";
 import LitepieDatepicker from "litepie-datepicker";
 
-import SearchInput from "../components/SearchInput.vue";
+import SearchInputFrom from "../components/SearchInputFrom.vue";
+import SearchInputTo from "../components/SearcInputTo.vue";
+import tickets from "../data/tickets.json";
 export default {
   name: "Search",
   components: {
     LitepieDatepicker,
+    SearchInputTo,
+    SearchInputFrom,
+  },
 
-    SearchInput,
+  methods: {
+    getTickets() {
+      tickets.filter((e) => {
+        if (
+          e.DepartureCity === this.$store.state.cityFrom &&
+          e.ArrivalCity === this.$store.state.cityTo &&
+          e.DepatureDate === this.$store.state.dateValue[0] &&
+          e.ArrivaDate === this.$store.state.dateValue[1]
+        ) {
+          this.$store.commit("getSearch", e);
+        }
+      });
+      // console.log(findTickets);
+    },
   },
   setup() {
-    const dateValue = ref([]);
     const formatter = ref({
       date: "DD MMM YYYY",
       month: "MMM",
@@ -54,7 +72,6 @@ export default {
     // let g = () => console.log(dateValue);
 
     return {
-      dateValue,
       formatter,
     };
   },

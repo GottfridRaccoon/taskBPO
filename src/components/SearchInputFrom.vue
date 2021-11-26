@@ -8,7 +8,7 @@
       type="text"
       id="search"
       v-model="searchTerm"
-      @change="isShow = true"
+      @change="storeUpdate"
       class="
         shadow
         appearance-none
@@ -46,14 +46,17 @@
       <li
         v-for="city in searchCities"
         :key="city.name"
-        @click="selectCity(city.name)"
-        v-on:click="isShow = false"
+        @click="storeList"
         class="cursor-pointer hover:bg-gray-100 p-1"
       >
+        <!-- v-on:click="changeCity" -->
+
         {{ city.name }}
       </li>
     </ul>
   </div>
+
+  <h1>{{ $store.state.cityFrom }}</h1>
 </template>
 
 <script>
@@ -61,9 +64,21 @@ import cities from "../data/cities.json";
 import { ref, computed } from "vue";
 
 export default {
-  name: "SearchInput",
+  name: "SearchInputFrom",
+
+  methods: {
+    storeUpdate(e) {
+      this.$store.commit("getCityFrom", e.target.value);
+      this.isShow = true;
+    },
+    storeList(e) {
+      this.$store.commit("getCityFrom", e.target.innerText);
+      this.isShow = false;
+    },
+  },
   props: {
     title: String,
+    vuexValue: String,
   },
   data() {
     return {

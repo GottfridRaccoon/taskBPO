@@ -1,0 +1,38 @@
+[
+	{
+		"DepartureCity": "Moscow",
+		"ArrivalCity": "Boston",
+		"DepatureDate": "26 Nov 2021",
+		"ArrivaDate": "28 Nov 2021"
+	},
+	{
+		"DepartureCity": "Moscow",
+		"ArrivalCity": "Boston",
+		"DepatureDate": "26 Nov 2021",
+		"ArrivaDate": "28 Nov 2021"
+	},
+	{
+		"DepartureCity": "Miami Beach",
+		"ArrivalCity": "Moscow",
+		"DepatureDate": "30 Nov 2021",
+		"ArrivaDate": "1 Dec 2021"
+	},
+	{
+		"DepartureCity": "Miami Beach",
+		"ArrivalCity": "Moscow",
+		"DepatureDate": "30 Nov 2021",
+		"ArrivaDate": "1 Dec 2021"
+	},
+	{
+		"DepartureCity": "Ordino",
+		"ArrivalCity": "Baltimore",
+		"DepatureDate": "26 Nov 2021",
+		"ArrivaDate": "28 Nov 2021"
+	},
+	{
+		"DepartureCity": "Ordino",
+		"ArrivalCity": "Baltimore",
+		"DepatureDate": "26 Nov 2021",
+		"ArrivaDate": "28 Nov 2021"
+	}
+]

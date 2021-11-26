@@ -1,15 +1,28 @@
 <template>
- <a>dddd</a>
+  <div class="m-16">
+    <h1 class="text-xl mb-5">Search Data:</h1>
+    <h3>Departure City:{{ $store.state.cityFrom }}</h3>
+    <h3>Arrival City: {{ $store.state.cityTo }}</h3>
+    <h3>Departure Date: {{ $store.state.dateValue[0] }}</h3>
+    <h3>Arriva Date: {{ $store.state.dateValue[1] }}</h3>
+  </div>
+  <div class="ml-16">
+    <h1 class="text-xl mb-5">Result</h1>
+    <FindResult></FindResult>
+    <h1 class="text-xl mb-5">Another tickets</h1>
+    <AnotherTickets></AnotherTickets>
+  </div>
 </template>
 
 <script>
 // @ is an alias to /src
-
-
+import FindResult from "../components/FindResult";
+import AnotherTickets from "../components/AnotherTickets.vue";
 export default {
-  name: 'Result',
+  name: "Result",
   components: {
-   
-  }
-}
+    FindResult,
+    AnotherTickets,
+  },
+};
 </script>
