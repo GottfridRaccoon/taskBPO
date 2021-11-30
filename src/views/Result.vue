@@ -9,20 +9,40 @@
   <div class="ml-16">
     <h1 class="text-xl mb-5">Result</h1>
     <FindResult></FindResult>
-    <h1 class="text-xl mb-5">Another tickets</h1>
-    <AnotherTickets></AnotherTickets>
+
+    <!-- <h1 class="text-xl mb-5">Another tickets</h1> -->
+    <!-- <AnotherTickets></AnotherTickets> -->
+
+    <router-link to="/">
+      <button
+        v-on:click="getTickets"
+        class="
+          bg-blue-500
+          hover:bg-blue-700
+          text-white
+          font-bold
+          py-2
+          px-4
+          rounded
+          db
+          mt-6
+        "
+      >
+        To search
+      </button></router-link
+    >
+
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import FindResult from "../components/FindResult";
-import AnotherTickets from "../components/AnotherTickets.vue";
+
 export default {
   name: "Result",
   components: {
     FindResult,
-    AnotherTickets,
   },
 };
 </script>

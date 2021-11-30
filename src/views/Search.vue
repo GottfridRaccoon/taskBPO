@@ -26,7 +26,7 @@
             mt-6
           "
         >
-          Button
+          Search
         </button></router-link
       >
     </div>

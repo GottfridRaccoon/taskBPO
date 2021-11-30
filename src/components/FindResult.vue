@@ -1,5 +1,15 @@
 <template>
   <div class="mb-14">
+    <h1 v-if="$store.state.searchValue.length === 0" class="text-2xl mb-5">
+      No results
+    </h1>
+    <p>Sort By</p>
+    <select>
+      <option @click="decrasePrice()">Decrease price</option>
+      <option @click="incrasePrice()">Price increase</option>
+      <option @click="incraseTime()">Time increase</option>
+      <option @click="decraseTime()">Time decrease</option>
+    </select>
     <ul id="v-for-object" class="flex">
       <li
         v-for="value in searchValue"
@@ -20,6 +30,8 @@
           <p>Arrival City: {{ value.ArrivalCity }}</p>
           <p>Departure Date: {{ value.DepatureDate }}</p>
           <p>Arrival Date: {{ value.ArrivaDate }}</p>
+          <p>Cost: {{ value.Cost }}</p>
+          <p>Time: {{ value.Time }}</p>
           <button
             class="
               bg-blue-500
@@ -47,6 +59,31 @@ export default {
   computed: mapState({
     searchValue: ({ searchValue }) => searchValue,
   }),
+
+  methods: {
+    decrasePrice() {
+      this.$store.commit("decrasePrice");
+      //  console.log(this.$store.state.searchValue);
+    },
+    incrasePrice() {
+      this.$store.commit("inctracePrice");
+    },
+    incraseTime() {
+      this.$store.commit("incraseTime");
+    },
+    decraseTime() {
+      this.$store.commit("decraseTime");
+    },
+  },
+  // methods: {
+  //   proverka() {
+  //     if (this.$store.state.searchValue.length === 0) {
+  //       console.log("empty");
+  //     } else {
+  //       console.log("nicht");
+  //     }
+  //   },
+  // },
 };
 </script>
 
