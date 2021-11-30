@@ -4,7 +4,6 @@
 		"ArrivalCity": "Boston",
 		"DepatureDate": "26 Nov 2021",
 		"ArrivaDate": "28 Nov 2021",
-		"ArrivaDate": "28 Nov 2021",
 		"Cost": 3000,
 		"Time": "10:48:00"
 	},
@@ -21,7 +20,6 @@
 		"ArrivalCity": "Boston",
 		"DepatureDate": "26 Nov 2021",
 		"ArrivaDate": "28 Nov 2021",
-		"ArrivaDate": "28 Nov 2021",
 		"Cost": 2000,
 		"Time": "10:38:00"
 	},
@@ -36,7 +34,7 @@
 	{
 		"DepartureCity": "Miami Beach",
 		"ArrivalCity": "Moscow",
-		"ArrivaDate": "1 Dec 2021",
+		"DepatureDate": "1 Dec 2021",
 		"ArrivaDate": "1 Dec 2021",
 		"Cost": 1500
 	},
@@ -71,7 +69,6 @@
 		"DepartureCity": "Ordino",
 		"ArrivalCity": "Baltimore",
 		"DepatureDate": "26 Nov 2021",
-		"ArrivaDate": "28 Nov 2021",
 		"ArrivaDate": "28 Nov 2021",
 		"Cost": 3000
 	},

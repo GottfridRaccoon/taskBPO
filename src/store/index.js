@@ -1,5 +1,6 @@
 import { createStore } from 'vuex'
 
+
 export default createStore({
   state: {
     dateValue: []
@@ -25,8 +26,15 @@ export default createStore({
       state.cityTo = val
     }
     , getSearch(state, val) {
+      console.log("val", val)
+
       state.searchValue.push(val)
-      console.log(state.searchValue)
+      console.log("searchval", state.searchValue)
+      // console.log("val", val)
+      // console.log("a", a)
+    },
+    resetSearch(state) {
+      state.searchValue = []
     }
     , decrasePrice(state,) {
       let a = state.searchValue.sort((a, b) => b.Cost - a.Cost);

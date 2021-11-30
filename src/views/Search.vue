@@ -51,6 +51,7 @@ export default {
 
   methods: {
     getTickets() {
+      this.$store.commit("resetSearch");
       tickets.filter((e) => {
         if (
           e.DepartureCity === this.$store.state.cityFrom &&
@@ -60,6 +61,7 @@ export default {
         ) {
           this.$store.commit("getSearch", e);
         }
+        //console.log(e);
       });
       // console.log(findTickets);
     },

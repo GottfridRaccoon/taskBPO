@@ -88,7 +88,7 @@ export default {
 </script>
 
 <style>
-.tickets__li:hover {
+.tickets__li {
   animation-name: example;
   animation-duration: 4s;
 }
