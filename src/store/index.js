@@ -61,7 +61,8 @@ export default createStore({
       state.searchValue = []
       state.searchValue.push(...sortin)
       console.log(sortin)
-    }
+    },
+    
 
   },
   actions: {
